@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 @AllArgsConstructor
 public class ClienteDeleteAdapter implements ClienteDeleteService {
   private final ClienteRepository clienteRepository;
-
   @Transactional
   public void deleteCliente(Cliente cliente) {
     clienteRepository.updateStateCliente(cliente.getId(), cliente.getEstado());
